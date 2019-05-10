@@ -108,11 +108,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shopify_polaris__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_shopify_polaris__WEBPACK_IMPORTED_MODULE_1__);
 
 
+var img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
 var Index = function Index() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_1__["TextStyle"], {
-    variation: "positive"
-  }, "Sample app using React and Next.js"));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_1__["Page"], {
+    primaryAction: {
+      content: 'Select products'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_1__["Layout"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_shopify_polaris__WEBPACK_IMPORTED_MODULE_1__["EmptyState"], {
+    heading: "Discount your products temporarily",
+    action: {
+      content: 'Select products',
+      onAction: function onAction() {
+        return console.log('clicked');
+      }
+    },
+    image: img
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Select products to change their price temporarily."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
